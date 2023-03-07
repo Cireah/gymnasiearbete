@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 650421548390277346}
   - component: {fileID: 438151603443732932}
-  - component: {fileID: 438151603443732934}
   - component: {fileID: 438151603443732933}
   - component: {fileID: 438151603443732794}
+  - component: {fileID: 438151603443732934}
+  - component: {fileID: 2575000769330478760}
   m_Layer: 0
   m_Name: rotatingcopia
   m_TagString: Untagged
@@ -85,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &438151603443732934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648079634619490316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e5e83467d17f043a7ae71761ea3030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerActive: 0
 --- !u!61 &438151603443732933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +133,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &438151603443732934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648079634619490316}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e5e83467d17f043a7ae71761ea3030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActive: 0
+--- !u!114 &2575000769330478760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648079634619490316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65fff72c4818c74a87957dd875469ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
