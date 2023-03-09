@@ -6,13 +6,17 @@ using TMPro;
 public class rotatelaser : MonoBehaviour
 {
     public GameObject inputfield;
+    public TMP_InputField inputfieldy;
     public Rigidbody2D Player;
+    public GameObject door;
+
     [SerializeField] private bool triggerActive = false;
 
 
     void Start()
     {
         inputfield.SetActive(false);
+        door.SetActive(false);
     }
     
     public void OnTriggerEnter2D(Collider2D copiaplush)
@@ -47,10 +51,12 @@ public class rotatelaser : MonoBehaviour
 
         if (text == "among us")
         {
+            inputfieldy.text = "";
             transform.Rotate(Vector3.forward, 90);
 
             Player.constraints = RigidbodyConstraints2D.None;
             Player.constraints = RigidbodyConstraints2D.FreezeRotation;
+            door.SetActive(true);
         }
     }
 }

@@ -1617,6 +1617,10 @@ PrefabInstance:
       value: copiaplush
       objectReference: {fileID: 0}
     - target: {fileID: 2575000769330478760, guid: 7e83e2eedc6324e46aa0d61363583213, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1767816663}
+    - target: {fileID: 2575000769330478760, guid: 7e83e2eedc6324e46aa0d61363583213, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1125510156}
@@ -1624,6 +1628,10 @@ PrefabInstance:
       propertyPath: inputfield
       value: 
       objectReference: {fileID: 1606055476}
+    - target: {fileID: 2575000769330478760, guid: 7e83e2eedc6324e46aa0d61363583213, type: 3}
+      propertyPath: inputfieldy
+      value: 
+      objectReference: {fileID: 1606055478}
     - target: {fileID: 2575000769330478760, guid: 7e83e2eedc6324e46aa0d61363583213, type: 3}
       propertyPath: triggerActive
       value: 1
