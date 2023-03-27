@@ -9,6 +9,7 @@ public class rotatelaser : MonoBehaviour
     public TMP_InputField inputfieldy;
     public Rigidbody2D Player;
     public GameObject door;
+    public GameObject laser;
 
     [SerializeField] private bool triggerActive = false;
 
@@ -19,18 +20,18 @@ public class rotatelaser : MonoBehaviour
         door.SetActive(false);
     }
     
-    public void OnTriggerEnter2D(Collider2D copiaplush)
+    public void OnTriggerEnter2D(Collider2D areadetect)
     {
-        if (copiaplush.CompareTag("Player"))
+        if (areadetect.CompareTag("Player"))
         {
             triggerActive = true;
             inputfield.SetActive(true);
         }
     }
 
-    public void OnTriggerExit2D(Collider2D copiaplush)
+    public void OnTriggerExit2D(Collider2D areadetect)
     {
-        if (copiaplush.CompareTag("Player"))
+        if (areadetect.CompareTag("Player"))
         {
             triggerActive = false;
             inputfield.SetActive(false);
@@ -51,9 +52,9 @@ public class rotatelaser : MonoBehaviour
 
         if (text == "among us")
         {
-            inputfieldy.text = "";
-            transform.Rotate(Vector3.forward, 90);
+            inputfield.GetComponent<TMP_InputField>().text = "";
 
+            laser.transform.Rotate(Vector3.forward, 30);
             Player.constraints = RigidbodyConstraints2D.None;
             Player.constraints = RigidbodyConstraints2D.FreezeRotation;
             door.SetActive(true);
