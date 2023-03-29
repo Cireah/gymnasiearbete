@@ -11,6 +11,11 @@ public class rotatelaser : MonoBehaviour
     public GameObject door;
     public GameObject laser;
 
+    public string answer = "2x";
+    public float laserrotation = 50f;
+    public float laserhorizontal = 50f;
+    public float laservertical = 6f;
+
     [SerializeField] private bool triggerActive = false;
 
 
@@ -49,12 +54,12 @@ public class rotatelaser : MonoBehaviour
     public void ReadStringInput()
     {
         string text = inputfield.GetComponent<TMP_InputField>().text;
-
-        if (text == "among us")
+        if (text == answer)
         {
             inputfield.GetComponent<TMP_InputField>().text = "";
 
-            laser.transform.Rotate(Vector3.forward, 30);
+            laser.transform.Rotate(Vector3.forward, laserrotation);
+            laser.transform.position = new Vector3(laserhorizontal, laservertical);
             Player.constraints = RigidbodyConstraints2D.None;
             Player.constraints = RigidbodyConstraints2D.FreezeRotation;
             door.SetActive(true);

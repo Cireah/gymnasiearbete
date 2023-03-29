@@ -5,8 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class sceneswitch : MonoBehaviour
 {
-    public void LoadScene()
+    public int scenecount = 1;
+
+    public void LoadGameScene1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Lvl1Stage1");
+    }
+
+    public void LoadGameScene2()
+    {
+        SceneManager.LoadScene("Lvl1Stage2");
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(scenecount);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void OnTriggerEnter2D(Collider2D door)
+    {
+        if (door.CompareTag("Player"))
+        {
+            LoadNextScene();
+        }
     }
 }

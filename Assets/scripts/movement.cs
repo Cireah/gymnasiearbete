@@ -10,17 +10,29 @@ public class movement : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
 
+    private SpriteRenderer _renderer;
+
     public float runSpeed = 20.0f;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        if (horizontal < 0)
+        {
+            _renderer.flipX = true;
+        }
+        if (horizontal > 0)
+        {
+            _renderer.flipX = false;
+        }
     }
 
     private void FixedUpdate()
